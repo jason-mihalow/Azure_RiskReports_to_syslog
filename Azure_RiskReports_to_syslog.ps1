@@ -51,6 +51,12 @@ $querytime = $querytime.ToUniversalTime()
 #format querytime for use in the API call
 $querytime = "{0:s}" -f $querytime + "Z"
 
+#get the current path
+$current_path = Split-Path -Parent $PSCommandPath
+
+#location of file of ids
+$test_path = $current_path + "\current_report_ids.txt"
+
 #if we successfully got an Oauth2 token
 if ($oauth.access_token -ne $null) 
 {
@@ -62,12 +68,6 @@ if ($oauth.access_token -ne $null)
     
 	#initialize array
     $lastrun_ids = @()
-	
-	#get the current path
-	$current_path = convert-path .
-
-	#location of file of ids
-	$test_path = $current_path + "\current_report_ids.txt"
 
     if ($test_path)
     {
