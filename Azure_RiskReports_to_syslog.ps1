@@ -1,7 +1,7 @@
 ﻿<#
 Script written by Jason Mihalow 
 
-Description:  This script will query for $querytime amount of time from the Microsoft Graph Beta API and retreive the 6 availiable Azure idenity risk reports.  These reports are detailed here: https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/identityriskevent.  The script will write the log id values to a file so that they can be compared during the next execution of the script.  This will ensure that if there is a delay in the creation of the risk report alerts due to an issue on the Azure side, we won't miss any logs.  The script will get the risk reports and send any new logs when compared to the previous execution.  The new logs will be sent via TCP to give the most space for log text.  The six risk report types are:
+Description:  This script will query for $querytime amount of time from the Microsoft Graph Beta API and retrieve the 6 available Azure identity risk reports.  These reports are detailed here: https://developer.microsoft.com/en-us/graph/docs/api-reference/beta/resources/identityriskevent.  The script will write the log id values to a file so that they can be compared during the next execution of the script.  This will ensure that if there is a delay in the creation of the risk report alerts due to an issue on the Azure side, we won't miss any logs.  The script will get the risk reports and send any new logs when compared to the previous execution.  The new logs will be sent via TCP to give the most space for log text.  The six risk report types are:
 
 leakedCredentialsRiskEvents
 anonymousIpRiskEvents
